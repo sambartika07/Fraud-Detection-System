@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        FraudGuard AI
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+
+</nav>
+
+<div class="form-container">
+
+    <h2>Fraud Detection</h2>
+
+    <p>Upload a CSV file containing transaction data.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input
+            type="file"
+            id="file"
+            name="file"
+            accept=".csv"
+            required
+            onchange="showFileName()">
+
+        <p id="filename" style="font-size:18px;font-weight:bold;color:#4CAF50;"></p>
+
+        <br>
+
+        <button type="submit">
+            Predict Fraud
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+function showFileName() {
+
+    const input = document.getElementById("file");
+    const filename = document.getElementById("filename");
+
+    if (input.files.length > 0) {
+
+        filename.innerHTML = "📄 " + input.files[0].name + " ✅ Selected";
+
+        // Hide Choose File button
+        input.style.display = "none";
+    }
+
+}
+
+</script>
+<script>
+document.querySelector("form").addEventListener("submit", function () {
+
+    document.body.innerHTML = `
+    <div style="
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        flex-direction:column;
+        font-family:Arial;
+    ">
+
+        <h2>🔄 Analyzing Transactions...</h2>
+
+        <p>Please wait...</p>
+
+    </div>
+    `;
+});
+</script>
+</body>
+</html>

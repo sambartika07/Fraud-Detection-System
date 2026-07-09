@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FraudGuard AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        FraudGuard AI
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/prediction">Predict</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+
+</nav>
+
+<div class="dashboard">
+
+    <h1>Welcome, {{ username }} 👋</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Total Transactions</h2>
+            <p>{{ total_transactions if total_transactions is defined else 0 }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Fraud Detected</h2>
+            <p>{{ fraud_count if fraud_count is defined else 0 }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Legitimate Transactions</h2>
+            <p>{{ legitimate_count if legitimate_count is defined else 0 }}</p>
+        </div>
+
+    </div>
+
+    <div class="buttons" style="margin-top:40px;">
+
+        <a href="/prediction">
+            <button>🔍 Predict Fraud</button>
+        </a>
+
+        <a href="/logout">
+            <button>🚪 Logout</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

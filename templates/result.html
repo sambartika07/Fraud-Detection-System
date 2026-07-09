@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+
+table{
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:#111827;
+    color:white;
+}
+
+th,td{
+    border:1px solid #374151;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#2563eb;
+}
+
+tr:nth-child(even){
+    background:#1f2937;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+FraudGuard AI
+</div>
+
+<ul>
+
+<li><a href="/dashboard">Dashboard</a></li>
+
+<li><a href="/prediction">Predict Again</a></li>
+
+<li><a href="/logout">Logout</a></li>
+
+</ul>
+
+</nav>
+
+<div class="dashboard">
+
+<h1>Prediction Completed Successfully ✅</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Transactions</h2>
+<p>{{ total_transactions }}</p>
+</div>
+
+<div class="card">
+<h2>Fraud Detected</h2>
+<p>{{ fraud_count }}</p>
+</div>
+
+<div class="card">
+<h2>Legitimate Transactions</h2>
+<p>{{ legitimate_count }}</p>
+</div>
+
+</div>
+
+<h2 style="margin-top:50px;">
+🚨 Fraudulent Transactions
+</h2>
+<h2>Analysis Completed Successfully ✅</h2>
+
+<h3>Total Transactions : {{ total_transactions }}</h3>
+
+<h3>Fraud Detected : {{ fraud_count }}</h3>
+
+<h3>Legitimate : {{ legitimate_count }}</h3>
+
+<hr>
+
+{% if fraud_transactions %}
+
+<table>
+
+<tr>
+
+<th>Transaction ID</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for row in fraud_transactions %}
+
+<tr>
+
+<td>{{ row["Transaction ID"] }}</td>
+
+<td>₹ {{ "%.2f"|format(row["Amount"]) }}</td>
+
+<td>
+
+<span style="background:#dc2626;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+font-weight:bold;">
+
+🚨 Fraud
+
+</span>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<h3 style="color:lightgreen;text-align:center;">
+
+🎉 No Fraudulent Transactions Found
+
+</h3>
+
+{% endif %}
+
+<div class="buttons" style="margin-top:40px;">
+
+<a href="/prediction">
+
+<button>
+
+Upload Another CSV
+
+</button>
+
+</a>
+
+<a href="/download">
+
+<button>
+
+⬇ Download Fraud Report
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
