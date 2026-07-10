@@ -129,7 +129,7 @@ http://127.0.0.1:5000
 
 
 ### 🏠 Home Page
-![Home Page](screenshots/home.png)
+![Home Page](home.png)
 
 ### 🔑 Login Page
 ![Login Page](screenshots/login.png)
