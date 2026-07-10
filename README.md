@@ -102,6 +102,13 @@ pip install -r requirements.txt
 
 ```bash
 python app.py
+```
+
+Open your browser and visit:
+
+```
+http://127.0.0.1:5000
+```
 
 ---
 
@@ -120,29 +127,27 @@ python app.py
 ## 📸 Screenshots
 
 
-- 🏠 Home Page
-<img width="1920" height="1080" alt="home png" src="https://github.com/user-attachments/assets/570f84fc-4285-4fd1-af8d-e8911b194e74" />
 
-- 
-- 🔑 Login Page
-- <img width="1920" height="1080" alt="Screenshot (222)" src="https://github.com/user-attachments/assets/f263abac-1836-4e27-a302-296b8ebce74c" />
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
 
-- 📝 Registration Page
-- <img width="1920" height="1080" alt="Screenshot (221)" src="https://github.com/user-attachments/assets/c366e85d-6c97-4ae0-80d7-f503ae2a189c" />
+### 🔑 Login Page
+![Login Page](screenshots/login.png)
 
-- 
-- 📊 Dashboard
-- <img width="1920" height="1080" alt="Screenshot (223)" src="https://github.com/user-attachments/assets/29b6c02f-ce5c-45da-8939-60096a1eebea" />
+### 📝 Register Page
+![Register Page](screenshots/register.png)
 
-- 📂 CSV Upload Page
-- <img width="1920" height="1080" alt="Screenshot (224)" src="https://github.com/user-attachments/assets/7df0ef8c-c6c7-4111-8170-d3c7a037b60c" />
+### 📊 Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-- 🚨 Fraud Detection Result
-- <img width="1920" height="1080" alt="Screenshot (225)" src="https://github.com/user-attachments/assets/df617bb6-5835-431e-bf0c-dd2276c7c0ff" />
+### 📂 CSV Upload
+![CSV Upload](screenshots/CSV-upload.png)
 
-- 📥 Download Report
-- <img width="1920" height="1080" alt="Screenshot (226)" src="https://github.com/user-attachments/assets/f3555305-f5b9-4f49-893d-c070ee0ee07a" />
+### 🚨 Fraud Detection Result
+![Fraud Detection Result](screenshots/fraud-detection.png)
 
+### 📥 Download Report
+![Download Report](screenshots/download.png)
 
 ---
 
