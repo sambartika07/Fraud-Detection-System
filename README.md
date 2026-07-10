@@ -132,22 +132,22 @@ http://127.0.0.1:5000
 ![Home Page](home.png)
 
 ### 🔑 Login Page
-![Login Page](screenshots/login.png)
+![Login Page](login.png)
 
 ### 📝 Register Page
-![Register Page](screenshots/register.png)
+![Register Page](register.png)
 
 ### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](dashboard.png)
 
 ### 📂 CSV Upload
-![CSV Upload](screenshots/CSV-upload.png)
+![CSV Upload](CSV-upload.png)
 
 ### 🚨 Fraud Detection Result
-![Fraud Detection Result](screenshots/fraud-detection.png)
+![Fraud Detection Result](fraud-detection.png)
 
 ### 📥 Download Report
-![Download Report](screenshots/download.png)
+![Download Report](download.png)
 
 ---
 
