@@ -121,7 +121,7 @@ python app.py
 
 
 - 🏠 Home Page
-- <img width="1920" height="1080" alt="Screenshot (220)" src="https://github.com/user-attachments/assets/9f982e0a-5935-4164-9b8a-68cad95bd9f3" />
+<img width="1920" height="1080" alt="home png" src="https://github.com/user-attachments/assets/570f84fc-4285-4fd1-af8d-e8911b194e74" />
 
 - 
 - 🔑 Login Page
